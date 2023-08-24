@@ -56,3 +56,23 @@ body {
 
   animation: none;
 }
+/* fliping button */
+.flip-container {
+  perspective: 1000px;
+}
+
+.flip-button {
+  width: 160px;
+  height: 60px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.front-content {
+  backface-visibility: hidden;
+}
+

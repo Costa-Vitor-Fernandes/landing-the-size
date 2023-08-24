@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { Roboto } from 'next/font/google';
 
+
 const roboto = Roboto({ weight: ['300'], subsets: ['latin'] });
 
 const AnimatedText: React.FC = () => {
