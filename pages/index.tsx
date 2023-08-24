@@ -6,6 +6,7 @@ import ContactForm from "../components/ContactForm";
 import { useState } from "react";
 import Card from "../components/Card";
 import { gsap } from "gsap";
+import { FlippingButton } from "@/components/FlippingButton";
 export const inter = Inter({ subsets: ["latin"] });
 export const roboto = Roboto({ weight: ["300"], subsets: ["latin"] });
 export const robotao = Roboto({ weight: "500", subsets: ["latin"] });
@@ -141,12 +142,12 @@ export default function Home() {
       <title>iSize - Provador Virtual</title>
       {modal ? (
         <div
-          className="fixed min-w-[100%] h-full z-50 shadow-2xl"
+          className="fixed min-w-[100%] bg-[rgba(0,0,0,0.4)] h-full z-50 shadow-2xl"
           onClick={() => handleModal()}
         >
           <iframe
-            src="https://the-size-picker.vercel.app/teste?categoria=Vestido"
-            width={"95%"}
+            src="https://the-size-picker.vercel.app/teste?categoria=Calça"
+            width={"90%"}
             height={"95%"}
             className="mx-auto my-4 z-60"
           ></iframe>
@@ -176,9 +177,9 @@ export default function Home() {
         </div>
       </nav>
       <div className="flex flex-col justify-center sm:flex-row ">
-        <div className="z-10 mt-6 flex flex-col items-center opacity-100">
+        <div className="z-10  mt-6 flex flex-col items-center opacity-100">
           <AnimatedText />
-          <div className="flex max-w-xl mt-10  ml-2 drop-shadow-[0_35px_35px_rgba(0,0,0,0.55)]">
+          <div className="flex max-w-xl mt-10   ml-2 drop-shadow-[0_35px_35px_rgba(0,0,0,0.55)]">
             {/* <button className=" bg-black rounded-lg text-white p-10 mb-10 ">
               Agende uma Demonstração
             </button> */}
@@ -283,130 +284,6 @@ export default function Home() {
           <Card info={cardInfoGold} />
           <Card info={cardInfoDiamond} />
         </div>
-        {/* <div className="flex flex-col sm:flex-row">
-          <div className="flex-col flex justify-around bg-white ml-3 rounded-xl p-2 mb-5 mr-5">
-            <div className="my-2">
-            <h1
-              className={` text-gray-400 text-center text-3xl  ${bebao.className}`}
-              >
-              Prata
-            </h1>
-              </div>
-              <div>
-
-            <p>
-              -Sem integração{" "}
-              <span className="text-xs">
-                (para vendas feitas através do Instagram, Facebook, WhatsApp,
-                Telegram etc..)
-              </span>
-            </p>
-            <p>
-              -3 categorias{" "}
-              <span className="text-xs">(ex: Blusas, Calças e Vestidos)</span>
-            </p>
-            <p>
-              -Até 10.000 visitas mensais{" "}
-              <span className="text-xs">(no aplicativo)</span>
-            </p>
-            <p>
-              -Fita Metrica personalizada{" "}
-              <span className="text-xs">
-                (um pdf para imprimir e montar sua fita e tirar suas medidas
-                exatas)
-              </span>
-            </p>
-              </div>
-            <div className="flex flex-col justify-center mr-5">
-              <div className="flex justify-center">
-              <button className="rounded-xl px-5 py-4 mb-2 bg-gray-400 text-white pr-6">
-              <span className="self-center text-xs text-white">12x</span>
-                R$150
-              </button>
-              </div>
-            <span className="text-xs mt-2 ml-2 flex ">
-              Neste Preço está incluido a taxa de configuração diluida nas
-              primeiras 12 parcelas. Depois do primeiro ano, 12xR$50
-            </span>
-            </div>
-          </div>
-          <div className="bg-white ml-3 flex flex-col rounded-xl p-2 mb-5 mr-5">
-            <h1
-              className={`text-yellow-500 text-center text-3xl p-2 ${bebao.className}`}
-            >
-              Ouro
-            </h1>
-            <p>
-              -Integração com seu E-Commerce{" "}
-              <span className="text-xs">(prazo de 7 dias para instalação)</span>
-            </p>
-            <p>
-              -3 categorias{" "}
-              <span className="text-xs">(ex: Blusas, Calças e Vestidos)</span>
-            </p>
-            <p>
-              -Até 10.000 visitas mensais{" "}
-              <span className="text-xs">(no aplicativo)</span>
-            </p>
-            <p>
-              -Fita Metrica personalizada{" "}
-              <span className="text-xs">
-                (um pdf para imprimir e montar sua fita e tirar suas medidas
-                exatas)
-              </span>
-            </p>
-            <p>
-              -Google Analytics{" "}
-              <span className="text-xs">
-                (entenda que tipo de cliente acessou nosso aplicativo)
-              </span>
-            </p>
-            <div className="flex flex-row justify-center mr-5">
-              <p className="relative self-center">12x</p>
-              <button className="rounded-xl px-2 py-4 bg-yellow-400 text-white">
-                R$320
-              </button>
-            </div>
-            <span className="text-xs mt-2 flex justify-end">
-              Neste Preço está incluido a taxa de configuração diluida nas
-              primeiras 12 parcelas. Depois do primeiro ano, 12xR$150
-            </span>
-          </div>
-          <div className="bg-white ml-3 flex flex-col rounded-xl p-2 mb-5 mr-5">
-            <h1
-              className={`text-gray-500 text-center text-3xl p-2 ${bebao.className}`}
-            >
-              Diamante
-            </h1>
-            <p>
-              -Integração com seu E-Commerce{" "}
-              <span className="text-xs">(prazo de 7 dias para instalação)</span>
-            </p>
-            <p>-Categorias ilimitadas</p>
-            <p>
-              -Visitas mensais ilimitadas{" "}
-              <span className="text-xs">(no aplicativo)</span>
-            </p>
-            <p>
-              -Fita Metrica personalizada{" "}
-              <span className="text-xs">
-                (um pdf para imprimir e montar sua fita e tirar suas medidas
-                exatas)
-              </span>
-            </p>
-            <p>
-              -Google Analytics{" "}
-              <span className="text-xs">
-                (entenda que tipo de cliente acessou nosso aplicativo)
-              </span>
-            </p>
-            <p>-Suporte Gratuito</p>
-            <p>-Design Exclusivo</p>
-            <button className="rounded-xl self-center p-5 m-5 bg-green-400 text-white">
-              Converse com nossa equipe
-            </button>
-          </div>
-        </div> */}
       </div>
 
       <ContactForm />
@@ -417,48 +294,3 @@ export default function Home() {
 export async function getServerSideProps() {
   return { props: { data: "data" } };
 }
-
-export const FlippingButton = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleButtonClick = () => {
-    const tl = gsap.timeline();
-    
-    // Flip animation
-    tl.to('.flip-container', { rotateY: isFlipped ? 0 : 180, duration: 0.5 });
-
-    setIsFlipped(!isFlipped);
-  };
-
-  return (
-    <div className="">
-      <div className="flip-container perspective-1000">
-        <div className={`flip-button ${isFlipped ? 'flipped' : ''}`}>
-          <div className="front-content text-center">
-            <button
-              className="text-white bg-black rounded-lg shadow-2xl px-20 py-5"
-              onClick={handleButtonClick}
-            >
-              Agende Uma Demonstração
-            </button>
-          </div>
-          <div className={`absolute top-0 bg-white py-6  shadow-2xl rounded-md  ${isFlipped ? '' : 'hidden'} `}
-           onClick={handleButtonClick}
-           >
-            <div className="bg-white shadow-2xl">
-              <div className="flex px-2 ">
-
-            <input
-              type="email"
-              placeholder="Email"
-              className="input-field"
-              />
-            <button className="bg-green-400 rounded-lg py-2 px-3 ">Enviar</button>
-              </div>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
