@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { Overpass, Inter, Roboto } from "next/font/google";
-import AnimatedText from "./components/AnimatedText";
-import InfiniteLooper from "./components/InfiniteLooper";
-import ContactForm from "./components/ContactForm";
+import AnimatedText from "../components/AnimatedText";
+import InfiniteLooper from "../components/InfiniteLooper";
+import ContactForm from "../components/ContactForm";
 import { useState } from "react";
-import Card from "./components/Card";
+import Card from "../components/Card";
 import { gsap } from "gsap";
 export const inter = Inter({ subsets: ["latin"] });
 export const roboto = Roboto({ weight: ["300"], subsets: ["latin"] });

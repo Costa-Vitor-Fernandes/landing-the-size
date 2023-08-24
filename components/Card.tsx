@@ -1,5 +1,5 @@
 import { ReactElement } from "react"
-import { bebao } from ".."
+import { bebao } from "../pages"
 
 export interface info {
     h1:string,
