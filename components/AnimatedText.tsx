@@ -55,7 +55,7 @@ const AnimatedText: React.FC = () => {
 
   return (
     <div>
-      <h1 className={`text-7xl text-center px-10 mb-3 ${roboto.className}`}>
+      <h1 className={`text-7xl text-center sm:px-10 mb-3 ${roboto.className}`}>
         {words.map((word, index) => (
           <span key={index} id={`word-${index}`}>
             {word}{' '}

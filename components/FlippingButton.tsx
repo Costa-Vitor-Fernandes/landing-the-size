@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { gsap } from "gsap";
+
 export const FlippingButton = () => {
     const [isFlipped, setIsFlipped] = useState(false);
+    const [email,setEmail] = useState('')
   
     const handleButtonClick = () => {
       const tl = gsap.timeline();
@@ -12,6 +14,26 @@ export const FlippingButton = () => {
       setIsFlipped(!isFlipped);
     };
   
+
+    const submitFunction = async (email:string) =>{
+      if(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(email)){
+        const response = await fetch('/api/sendEmail', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(email),
+        });
+        setEmail('')
+
+        if(!response.ok){
+          console.log('error')
+        }
+        console.log(response)
+      }
+      else console.log('error')
+    }
+
     return (
       <div className=" mb-10">
         <div className="flip-container perspective-1000">
@@ -34,8 +56,9 @@ export const FlippingButton = () => {
                 type="email"
                 placeholder="Seu melhor email"
                 className="input-field pl-2  z-30"
+                onChange={(e)=>setEmail(e.target.value)}
                 />
-              <button className="bg-green-400 rounded-lg z-30 py-2 px-2 ml-1" >Enviar</button>
+              <button className="bg-green-400 rounded-lg z-30 py-2 px-2 ml-1" onClick={()=>submitFunction(email)}>Enviar</button>
                 </div>
                 </div>
             </div>

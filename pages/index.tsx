@@ -6,6 +6,7 @@ import ContactForm from "../components/ContactForm";
 import { useState } from "react";
 import Card from "../components/Card";
 import { gsap } from "gsap";
+import ColorTest from "../components/ColorTest";
 import { FlippingButton } from "@/components/FlippingButton";
 export const inter = Inter({ subsets: ["latin"] });
 export const roboto = Roboto({ weight: ["300"], subsets: ["latin"] });
@@ -33,7 +34,7 @@ const cardInfoSilver = {
         </span>
       </p>
       <p>
-        -3 categorias{" "}
+        -3 modelagens{" "}
         <span className="text-xs">(ex: Blusas, Calças e Vestidos)</span>
       </p>
       <p>
@@ -64,7 +65,7 @@ const cardInfoGold = {
         <span className="text-xs">(prazo de 7 dias para instalação)</span>
       </p>
       <p>
-        -3 categorias{" "}
+        -3 modelagens{" "}
         <span className="text-xs">(ex: Blusas, Calças e Vestidos)</span>
       </p>
       <p>
@@ -102,7 +103,7 @@ const cardInfoDiamond = {
         -Integração com seu E-Commerce{" "}
         <span className="text-xs">(prazo de 7 dias para instalação)</span>
       </p>
-      <p>-Categorias ilimitadas</p>
+      <p>-Modelagens ilimitadas</p>
       <p>
         -Visitas mensais ilimitadas{" "}
         <span className="text-xs">(no aplicativo)</span>
@@ -180,11 +181,7 @@ export default function Home() {
         <div className="z-10  mt-6 flex flex-col items-center opacity-100">
           <AnimatedText />
           <div className="flex max-w-xl mt-10   ml-2 drop-shadow-[0_35px_35px_rgba(0,0,0,0.55)]">
-            {/* <button className=" bg-black rounded-lg text-white p-10 mb-10 ">
-              Agende uma Demonstração
-            </button> */}
             <FlippingButton/>
-          
           </div>
         </div>
         <div className="flex sm:flex min-w-[35%] relative sm:bottom-18 ml-2  justify-center items-center">
@@ -213,21 +210,6 @@ export default function Home() {
           Com um toque de tecnologia, encontramos o tamanho ideal para seu
           cliente !
         </h2>
-        {/* <div className="flex flex-col mt-5 justify-around sm:flex-row">
-          <div>
-            <h3 className="p-5 sm:p-0">Nosso Objetivo é te dar :</h3>
-            <p>-Menos Gastos com Trocas e Devoluções</p>
-            <p>-Menos Logística de estoque</p>
-            <p>-Menos Tempo de atendimento</p>
-            <p>-Menos Filas no provador</p>
-          </div>
-          <div>
-            <h3 className="p-5 sm:p-0">Seus clientes vão ganhar :</h3>
-            <p>-Mais Confiança ao comprar </p>
-            <p>-Mais Conforto</p>
-            <p>-Mais Tempo para olhar mais produtos</p>
-          </div>
-        </div> */}
       </div>
       <div className="flex flex-col mt-20">
         <h1 className={`${robotao.className} text-center text-5xl`}>
@@ -250,6 +232,7 @@ export default function Home() {
           trazendo mais assertividade ao comprar.
         </p>
       </div>
+      
       <div className="flex flex-col mt-10 mx-8 bg-neutral-100 shadow-lg px-5 rounded-2xl">
         <h1 className={`text-2xl mt-10 ${robotao.className}`}>
           Como Funciona a Integração?
@@ -257,7 +240,7 @@ export default function Home() {
         <p className={`p-5 mb-5 ${roboto.className}`}>
           Vamos inserir um botão como esse abaixo dentro da página de produto do
           seu site. Nosso algoritmo vai identificar automaticamente a foto do
-          produto e sua categoria, retornando um tamanho otimizado pra cada tipo
+          produto,sua categoria e sua tabela de medidas, retornando um tamanho otimizado pra cada tipo
           de peça da sua loja.
         </p>
         <button
@@ -274,12 +257,24 @@ export default function Home() {
           Provador Virtual
         </button>
       </div>
+      <div className="flex flex-col mt-10 mx-8 bg-neutral-100 shadow-lg px-5 rounded-2xl">
+        <h1 className={`text-2xl mt-10 ${robotao.className}`}>Fita Métrica Personalizada</h1>
+        <p className={`p-5 mb-5 ${roboto.className}`}>
+         Seu cliente não sabe as próprias medidas? Vamos disponibilizar um pdf personalizado com sua marca, com instruções para imprimir e montar uma fita métrica. Assim podemos eliminar qualquer dúvida do seu cliente quanto ao caimento da roupa com o nosso modo "Medidas Exatas"
+        </p>
+      </div>
+      <div className="flex flex-col mt-10 mx-8 bg-neutral-100 shadow-lg px-5 rounded-2xl">
+        <h1 className={`text-2xl mt-10 ${robotao.className}`}>Reduzindo a sua logística</h1>
+        <p className={`p-5 mb-5 ${roboto.className}`}>
+          Lojas usando o provador virtual iSize têm uma significativa redução nas taxas de devoluções e trocas (até -50%). Menos gastos com frete, menos tempo gerenciando estoque. Mais clientes satisfeitos que voltam pra comprar mais
+        </p>
+      </div>
 
       <div className="flex bg-neutral-700 p-5 flex-col mt-10">
         <h1 className="text-white text-5xl text-center mb-6">
           Planos de Assinatura
         </h1>
-        <div className="flex flex-col sm:flex-row">
+        <div className="flex flex-col lg:flex-row">
           <Card info={cardInfoSilver} />
           <Card info={cardInfoGold} />
           <Card info={cardInfoDiamond} />
@@ -287,6 +282,7 @@ export default function Home() {
       </div>
 
       <ContactForm />
+    <ColorTest></ColorTest>
     </main>
   );
 }

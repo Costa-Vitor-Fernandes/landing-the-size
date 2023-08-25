@@ -16,7 +16,7 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e:any) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
     // Here, you can implement the code to send the form data to your backend or perform any desired actions.
     console.log(formData);
@@ -26,6 +26,23 @@ const ContactForm = () => {
       email: '',
       message: '',
     });
+    if(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(formData.email)){
+      // SendEmail(email)
+      console.log('email correct: ' ,formData.email, formData,'formData')
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if(!response.ok){
+        console.log('error')
+      }
+      console.log(response)
+    }
+    else console.log('error')
   };
 
   return (
