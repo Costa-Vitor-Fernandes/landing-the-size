@@ -3,11 +3,12 @@ import { Overpass, Inter, Roboto } from "next/font/google";
 import AnimatedText from "../components/AnimatedText";
 import InfiniteLooper from "../components/InfiniteLooper";
 import ContactForm from "../components/ContactForm";
-import { useState } from "react";
+import { useState , useRef} from "react";
 import Card from "../components/Card";
 import { gsap } from "gsap";
 import ColorTest from "../components/ColorTest";
 import { FlippingButton } from "@/components/FlippingButton";
+import Link from "next/link";
 export const inter = Inter({ subsets: ["latin"] });
 export const roboto = Roboto({ weight: ["300"], subsets: ["latin"] });
 export const robotao = Roboto({ weight: "500", subsets: ["latin"] });
@@ -132,10 +133,12 @@ const cardInfoDiamond = {
 
 export default function Home() {
   const [modal, setModal] = useState<boolean>(false);
+  const sobreRef = useRef(null)
+  const contatoRef = useRef(null)
 
   const handleModal = () => {
     setModal(!modal);
-    console.log("flip");
+    // console.log("flip");
   };
 
   return (
@@ -173,8 +176,13 @@ export default function Home() {
           </h1>
         </div>
         <div className="sm:justify-around sm:flex-row flex-col self-center items-center flex min-w-[50%]">
-          <a>Sobre</a>
-          <a>Contato</a>
+          <Link href="#sobre">
+          Sobre
+          </Link>
+          <Link href="#contato">
+          Contato
+          </Link>
+
         </div>
       </nav>
       <div className="flex flex-col justify-center sm:flex-row ">
@@ -223,7 +231,7 @@ export default function Home() {
           </InfiniteLooper>
         </div>
       </div>
-      <div className="flex flex-col mt-10 mx-8 bg-neutral-100 shadow-lg px-5 rounded-2xl">
+      <div ref={sobreRef} id="sobre" className="flex flex-col mt-10 mx-8 bg-neutral-100 shadow-lg px-5 rounded-2xl">
         <h1 className={`text-2xl mt-10 ${robotao.className}`}>Sobre</h1>
         <p className={`p-5 mb-5 ${roboto.className}`}>
           iSize é um aplicativo web de provador virtual de roupas. Utilizando a
@@ -260,7 +268,7 @@ export default function Home() {
       <div className="flex flex-col mt-10 mx-8 bg-neutral-100 shadow-lg px-5 rounded-2xl">
         <h1 className={`text-2xl mt-10 ${robotao.className}`}>Fita Métrica Personalizada</h1>
         <p className={`p-5 mb-5 ${roboto.className}`}>
-         Seu cliente não sabe as próprias medidas? Vamos disponibilizar um pdf personalizado com sua marca, com instruções para imprimir e montar uma fita métrica. Assim podemos eliminar qualquer dúvida do seu cliente quanto ao caimento da roupa com o nosso modo "Medidas Exatas"
+         Seu cliente não sabe as próprias medidas? Vamos disponibilizar um pdf personalizado com sua marca, com instruções para imprimir e montar uma fita métrica. Assim podemos eliminar qualquer dúvida do seu cliente quanto ao caimento da roupa com o nosso modo &quot;Medidas Exatas&quot;
         </p>
       </div>
       <div className="flex flex-col mt-10 mx-8 bg-neutral-100 shadow-lg px-5 rounded-2xl">

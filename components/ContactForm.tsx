@@ -46,7 +46,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className=" mx-20 p-4 ">
+    <div id='contato' className=" mx-20 p-4 ">
       <h2 className="text-2xl font-semibold mb-4">Entre em Contato</h2>
       <form className='flex flex-col' onSubmit={handleSubmit}>
         <div className="mb-4">
