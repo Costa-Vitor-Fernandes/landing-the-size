@@ -16,11 +16,11 @@ export const bebas = Overpass({ weight: "400", subsets: ["latin"] });
 export const bebao = Overpass({ weight: "600", subsets: ["latin"] });
 export const images = [
   "/integra/tray.png",
-  "/integra/magento.png",
+  // "/integra/magento.png",
   "/integra/wp.png",
   "/integra/nuvemshop.png",
   "/integra/woocomerce_trans.png",
-  "/integra/wix.png",
+  // "/integra/wix.png",
 ];
 
 const cardInfoSilver = {
@@ -53,7 +53,7 @@ const cardInfoSilver = {
   span: "12x",
   button: "R$150",
   smallText:
-    "Neste Preço incluimos a taxa inii cial de instalação diluida nas primeiras 12 parcelas. Depois do primeiro ano, 12xR$50",
+    "Neste Preço incluimos a taxa inicial de instalação diluida nas primeiras 12 parcelas. Depois do primeiro ano, 12xR$50",
   h1Color: "-gray-400",
   buttonColor: "-gray-400",
 };
@@ -157,6 +157,7 @@ export default function Home() {
           ></iframe>
         </div>
       ) : null}
+      
       <nav
         className="flex justify-between 
       p-6"
@@ -203,7 +204,7 @@ export default function Home() {
           <div className="absolute">
             <div className="relative">
               <Image
-                src={"/dollPagephone.png"}
+                src={"/dollPage_phonenew.gif"}
                 alt="app_DollPage"
                 height={300}
                 width={300}

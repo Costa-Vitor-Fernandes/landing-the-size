@@ -47,7 +47,7 @@ export const FlippingButton = () => {
                 Agende Uma Demonstração
               </button>
             </div>
-            <div className={`absolute top-0 bg-white  shadow-2xl px-3 py-7 rounded-md  ${isFlipped ? '' : 'hidden'} `}
+            <div className={`absolute top-0 bg-white  shadow-2xl px-1 py-7 rounded-md  ${isFlipped ? '' : 'hidden'} `}
             //  onClick={handleButtonClick}
              >
               <form onSubmit={(e)=>{e.preventDefault();
