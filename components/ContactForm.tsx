@@ -5,6 +5,7 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: '',
   });
 
@@ -24,6 +25,7 @@ const ContactForm = () => {
     setFormData({
       name: '',
       email: '',
+      phone:'',
       message: '',
     });
     if(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(formData.email)){
@@ -47,7 +49,7 @@ const ContactForm = () => {
 
   return (
     <div id='contato' className=" mx-20 p-4 ">
-      <h2 className="text-2xl font-semibold mb-4">Entre em Contato</h2>
+      <h2 className="text-2xl font-semibold mb-4">Entre em contato com nossa equipe</h2>
       <form className='flex flex-col' onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="name" className="block mb-1">
@@ -77,6 +79,21 @@ const ContactForm = () => {
             required
           />
         </div>
+        <div className="mb-4">
+          <label htmlFor="phone" className="block mb-1">
+            Telefone
+          </label>
+          <input
+            type="number"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            className="w-full p-2 border rounded-md"
+            required
+          />
+        </div>
+        
         <div className="mb-4">
           <label htmlFor="message" className="block mb-1">
             Mensagem

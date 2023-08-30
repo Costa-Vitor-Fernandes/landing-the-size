@@ -51,9 +51,10 @@ const cardInfoSilver = {
     </div>
   ),
   span: "12x",
-  button: "R$150",
+  button: "R$149,99",
+  link: 'https://pay.infinitepay.io/isize/1799,90/',
   smallText:
-    "Neste Preço incluimos a taxa inicial de instalação diluida nas primeiras 12 parcelas. Depois do primeiro ano, 12xR$50",
+    "Neste Preço incluimos a taxa de instalação inicial diluida nas primeiras 12 parcelas. Depois do primeiro ano, 12xR$50",
   h1Color: "-gray-400",
   buttonColor: "-gray-400",
 };
@@ -89,11 +90,13 @@ const cardInfoGold = {
   ),
 
   span: "12x",
-  button: "R$320",
+  button: "R$319,99",
   smallText:
-    "Neste Preço incluimos a taxa inicial de instalação diluida nas primeiras 12 parcelas. Depois do primeiro ano, 12xR$50",
+    "Neste Preço incluimos a taxa de instalação inicial diluida nas primeiras 12 parcelas. Depois do primeiro ano, 12xR$50",
   h1Color: "-yellow-400",
   buttonColor: "-yellow-400",
+  link: 'https://pay.infinitepay.io/isize/3199,90/'
+
 };
 const cardInfoDiamond = {
   h1: "Diamante",
@@ -128,6 +131,7 @@ const cardInfoDiamond = {
   span: "",
   button: "Converse com nossa equipe",
   smallText: "",
+  link: '#contato',
   buttonColor: "-green-400",
 };
 
