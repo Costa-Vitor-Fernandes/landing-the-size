@@ -12,7 +12,7 @@ export default async function handler(
  
         sgMail.setApiKey(process.env.SENDGRID_API_KEY);
       const msg = {
-        to: 'isizeweb@gmail.com', // Change to your recipient
+        to: 'usize.web@gmail.com', // Change to your recipient
         from: "boodutcivkvqsuykcm@cwmxc.com", // Change to your verified sender
         subject: "Agendar Demonstração",
         text: 'client',

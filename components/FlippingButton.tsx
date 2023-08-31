@@ -48,9 +48,9 @@ export const FlippingButton = () => {
               </button>
             </div>
             <div className={`absolute flex justify-center w-[100%] top-0 bg-white  shadow-2xl px-1 py-7 rounded-md  ${isFlipped ? '' : 'hidden'} `}
-             onClick={handleButtonClick}
+            //  onClick={handleButtonClick}
              >
-              <form className="bg-white  max-w-[100%] shadow-2xl "  onSubmit={(e)=>{e.preventDefault();
+              <form className="max-w-[100%] shadow-2xl "  onSubmit={(e)=>{e.preventDefault();
                 submitFunction(email)}}>
 
               <div className=" max-w-[100%] shadow-2xl ">
