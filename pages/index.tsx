@@ -95,7 +95,7 @@ const cardInfoGold = {
     "Neste Preço incluimos a taxa de instalação inicial diluida nas primeiras 12 parcelas. Depois do primeiro ano, 12xR$50",
   h1Color: "-yellow-400",
   buttonColor: "-yellow-400",
-  link: 'https://pay.infinitepay.io/uSize/3199,90/'
+  link: 'https://pay.infinitepay.io/uSize/3839,88/'
 
 };
 const cardInfoDiamond = {
