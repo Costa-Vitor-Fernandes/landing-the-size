@@ -48,7 +48,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div id='contato' className=" mx-20 p-4 ">
+    <div id='contato' className=" mx-20 p-4 bg-gray-100 rounded-lg my-10 ">
       <h2 className="text-2xl font-semibold mb-4">Entre em contato com nossa equipe</h2>
       <form className='flex flex-col' onSubmit={handleSubmit}>
         <div className="mb-4">

@@ -257,14 +257,14 @@ export default function Home() {
           de peça da sua loja.
         </p>
         <button
-          className=" self-center flex shadow-xl rounded-md px-5 py-2 mb-10"
+          className=" self-center flex shadow-xl rounded-md px-5 py-2 mb-10 text-xl"
           onClick={() => handleModal()}
         >
           <Image
             className="relative top-2 right-1"
             src={"/uSizeSymbol.png"}
-            width={20}
-            height={20}
+            width={25}
+            height={40}
             alt="uSize hanger icon"
           />
           Provador Virtual
