@@ -21,8 +21,8 @@ export default function Document() {
 <meta property="og:description" content="Aprimore a experiência do seu e-commerce de moda..."/>
 <meta property="og:image" itemProp="image" content="https://usize.vercel.app/usize1200x630.jpg"/>
 <meta property="og:image:secure_url" itemProp="image" content="https://usize.vercel.app/usize1200x630.jpg"/>
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+{/* <meta property="og:image:width" content="300" />
+<meta property="og:image:height" content="300" /> */}
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:url" content="https://usize.vercel.app"/>
 <meta property="og:type" content="website"/>
@@ -39,6 +39,10 @@ export default function Document() {
   `}
 </Script> 
       <body>
+      <link itemProp="thumbnailUrl" href="url_image"/> 
+<span itemProp="thumbnail" itemScope itemType="http://schema.org/ImageObject"> 
+  <link itemProp="url" href="url_image"/> 
+</span>
         <Main />
         <NextScript />
       </body>
