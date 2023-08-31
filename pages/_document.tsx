@@ -39,9 +39,9 @@ export default function Document() {
   `}
 </Script> 
       <body>
-      <link itemProp="thumbnailUrl" href="url_image"/> 
+      <link itemProp="thumbnailUrl" href="https://usize.vercel.app/usize1200x630.jpg"/> 
 <span itemProp="thumbnail" itemScope itemType="http://schema.org/ImageObject"> 
-  <link itemProp="url" href="url_image"/> 
+  <link itemProp="url" href="https://usize.vercel.app/usize1200x630.jpg"/> 
 </span>
         <Main />
         <NextScript />
