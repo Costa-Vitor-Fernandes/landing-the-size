@@ -1,16 +1,17 @@
 import { NextApiRequest, NextApiResponse } from "next";
+import sgMail from '@sendgrid/mail'
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   if (req.method === "POST") {
-    const { value } = req.body;
+    // const { value } = req.body;
 
     try {
-      const sgMail = require("@sendgrid/mail");
+      // const sgMail = require("@sendgrid/mail");
  
-        sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+        sgMail.setApiKey(String(process.env.SENDGRID_API_KEY));
       const msg = {
         to: 'usize.web@gmail.com', // Change to your recipient
         from: "boodutcivkvqsuykcm@cwmxc.com", // Change to your verified sender
