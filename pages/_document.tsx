@@ -20,6 +20,7 @@ export default function Document() {
 <meta property="og:title" content="uSize: Provador Virtual"/>
 <meta property="og:description" content="Aprimore a experiência do seu e-commerce de moda..."/>
 <meta property="og:image" itemProp="image" content="https://usize.vercel.app/usize1200x630.jpg"/>
+<meta property="og:image:secure_url" itemProp="image" content="https://usize.vercel.app/usize1200x630.jpg"/>
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:type" content="image/jpeg" />
