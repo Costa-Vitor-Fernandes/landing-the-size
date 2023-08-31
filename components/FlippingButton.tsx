@@ -47,19 +47,19 @@ export const FlippingButton = () => {
                 Agende Uma Demonstração
               </button>
             </div>
-            <div className={`absolute top-0 bg-white  shadow-2xl px-1 py-7 rounded-md  ${isFlipped ? '' : 'hidden'} `}
-            //  onClick={handleButtonClick}
+            <div className={`absolute flex justify-center w-[100%] top-0 bg-white  shadow-2xl px-1 py-7 rounded-md  ${isFlipped ? '' : 'hidden'} `}
+             onClick={handleButtonClick}
              >
-              <form onSubmit={(e)=>{e.preventDefault();
+              <form className="bg-white  max-w-[100%] shadow-2xl "  onSubmit={(e)=>{e.preventDefault();
                 submitFunction(email)}}>
 
-              <div className="bg-white shadow-2xl">
-                <div className="flex ">
+              <div className=" max-w-[100%] shadow-2xl ">
+                <div className="flex max-w-[100%] justify-between">
       
               <input
                 type="email"
-                placeholder="Seu melhor email"
-                className="input-field pl-2  z-30"
+                placeholder="Email"
+                className="input-field pl-2  z-30 max-w-[65%]"
                 onChange={(e)=>setEmail(e.target.value)}
                 value={email}
                 />
