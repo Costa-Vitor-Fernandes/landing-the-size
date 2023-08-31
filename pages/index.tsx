@@ -245,6 +245,12 @@ export default function Home() {
           trazendo mais assertividade ao comprar.
         </p>
       </div>
+      <div className="flex flex-col mt-10 mx-8 bg-neutral-100 shadow-lg px-5 rounded-2xl">
+        <h1 className={`text-2xl mt-10 ${robotao.className}`}>Reduzindo a sua logística</h1>
+        <p className={`p-5 mb-5 ${roboto.className}`}>
+          Lojas usando o provador virtual uSize têm uma significativa redução nas taxas de devoluções e trocas (até -50%). Menos gastos com frete, menos tempo gerenciando estoque. Mais clientes satisfeitos que voltam pra comprar mais
+        </p>
+      </div>
       
       <div className="flex flex-col mt-10 mx-8 bg-neutral-100 shadow-lg px-5 rounded-2xl">
         <h1 className={`text-2xl mt-10 ${robotao.className}`}>
@@ -276,12 +282,7 @@ export default function Home() {
          Seu cliente não sabe as próprias medidas? Vamos disponibilizar um pdf personalizado com sua marca, com instruções para imprimir e montar uma fita métrica. Assim podemos eliminar qualquer dúvida do seu cliente quanto ao caimento da roupa com o nosso modo &quot;Medidas Exatas&quot;
         </p>
       </div>
-      <div className="flex flex-col mt-10 mx-8 bg-neutral-100 shadow-lg px-5 rounded-2xl">
-        <h1 className={`text-2xl mt-10 ${robotao.className}`}>Reduzindo a sua logística</h1>
-        <p className={`p-5 mb-5 ${roboto.className}`}>
-          Lojas usando o provador virtual uSize têm uma significativa redução nas taxas de devoluções e trocas (até -50%). Menos gastos com frete, menos tempo gerenciando estoque. Mais clientes satisfeitos que voltam pra comprar mais
-        </p>
-      </div>
+
 
       <div className="flex bg-neutral-700 p-5 flex-col mt-10">
         <h1 className="text-white text-5xl text-center mb-6">
