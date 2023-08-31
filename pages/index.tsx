@@ -52,7 +52,7 @@ const cardInfoSilver = {
   ),
   span: "12x",
   button: "R$149,99",
-  link: 'https://pay.infinitepay.io/isize/1799,90/',
+  link: 'https://pay.infinitepay.io/uSize/1799,90/',
   smallText:
     "Neste Preço incluimos a taxa de instalação inicial diluida nas primeiras 12 parcelas. Depois do primeiro ano, 12xR$50",
   h1Color: "-gray-400",
@@ -95,7 +95,7 @@ const cardInfoGold = {
     "Neste Preço incluimos a taxa de instalação inicial diluida nas primeiras 12 parcelas. Depois do primeiro ano, 12xR$50",
   h1Color: "-yellow-400",
   buttonColor: "-yellow-400",
-  link: 'https://pay.infinitepay.io/isize/3199,90/'
+  link: 'https://pay.infinitepay.io/uSize/3199,90/'
 
 };
 const cardInfoDiamond = {
@@ -147,7 +147,7 @@ export default function Home() {
 
   return (
     <main className={`flex flex-col ${inter.className}`}>
-      <title>iSize - Provador Virtual</title>
+      <title>uSize - Provador Virtual</title>
       {modal ? (
         <div
           className="fixed min-w-[100%] bg-[rgba(0,0,0,0.4)] h-full z-50 shadow-2xl"
@@ -170,14 +170,14 @@ export default function Home() {
           <Image
             className="relative"
             alt="logo"
-            src={"/iSizeSymbol.png"}
+            src={"/uSizeSymbol.png"}
             height={150}
             width={150}
           ></Image>
           <h1
             className={`text-center  text-5xl text-black opacity-90 pl-2 ${robotao.className}`}
           >
-            iSize
+            uSize
           </h1>
         </div>
         <div className="sm:justify-around sm:flex-row flex-col self-center items-center flex min-w-[50%]">
@@ -239,7 +239,7 @@ export default function Home() {
       <div ref={sobreRef} id="sobre" className="flex flex-col mt-10 mx-8 bg-neutral-100 shadow-lg px-5 rounded-2xl">
         <h1 className={`text-2xl mt-10 ${robotao.className}`}>Sobre</h1>
         <p className={`p-5 mb-5 ${roboto.className}`}>
-          iSize é um aplicativo web de provador virtual de roupas. Utilizando a
+          uSize é um aplicativo web de provador virtual de roupas. Utilizando a
           tabela de medidas das roupas da sua loja, nosso algoritmo vai colher
           as medidas do usuário e retornar um tamanho recomendado otimizado,
           trazendo mais assertividade ao comprar.
@@ -262,10 +262,10 @@ export default function Home() {
         >
           <Image
             className="relative top-2 right-1"
-            src={"/iSizeSymbol.png"}
+            src={"/uSizeSymbol.png"}
             width={20}
             height={20}
-            alt="iSize hanger icon"
+            alt="uSize hanger icon"
           />
           Provador Virtual
         </button>
@@ -279,7 +279,7 @@ export default function Home() {
       <div className="flex flex-col mt-10 mx-8 bg-neutral-100 shadow-lg px-5 rounded-2xl">
         <h1 className={`text-2xl mt-10 ${robotao.className}`}>Reduzindo a sua logística</h1>
         <p className={`p-5 mb-5 ${roboto.className}`}>
-          Lojas usando o provador virtual iSize têm uma significativa redução nas taxas de devoluções e trocas (até -50%). Menos gastos com frete, menos tempo gerenciando estoque. Mais clientes satisfeitos que voltam pra comprar mais
+          Lojas usando o provador virtual uSize têm uma significativa redução nas taxas de devoluções e trocas (até -50%). Menos gastos com frete, menos tempo gerenciando estoque. Mais clientes satisfeitos que voltam pra comprar mais
         </p>
       </div>
 
