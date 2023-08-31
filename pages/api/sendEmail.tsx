@@ -12,6 +12,7 @@ export default async function handler(
       // const sgMail = require("@sendgrid/mail");
  
         sgMail.setApiKey(String(process.env.SENDGRID_API_KEY));
+        console.log('olha a key', process.env.SENDGRID_API_KEY)
       const msg = {
         to: 'usize.web@gmail.com', // Change to your recipient
         from: "boodutcivkvqsuykcm@cwmxc.com", // Change to your verified sender
