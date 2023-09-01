@@ -199,6 +199,8 @@ export default function Home() {
         </div>
         <div className="flex sm:flex min-w-[35%] relative sm:bottom-18 ml-2  justify-center items-center">
           <Image
+          priority
+
             className="z-20"
             src={"/blankPhone.png"}
             alt="phone"
@@ -208,6 +210,7 @@ export default function Home() {
           <div className="absolute">
             <div className="relative">
               <Image
+              priority
                 src={"/dollPage_phonenew.gif"}
                 alt="app_DollPage"
                 height={300}
