@@ -9,6 +9,7 @@ import { gsap } from "gsap";
 import ColorTest from "../components/ColorTest";
 import { FlippingButton } from "@/components/FlippingButton";
 import Link from "next/link";
+import Head from "next/head";
 export const inter = Inter({ subsets: ["latin"] });
 export const roboto = Roboto({ weight: ["300"], subsets: ["latin"] });
 export const robotao = Roboto({ weight: "500", subsets: ["latin"] });
@@ -147,7 +148,9 @@ export default function Home() {
 
   return (
     <main className={`flex flex-col ${inter.className}`}>
+      <Head>
       <title>uSize - Provador Virtual</title>
+      </Head>
       {modal ? (
         <div
           className="fixed min-w-[100%] bg-[rgba(0,0,0,0.4)] h-full z-50 shadow-2xl"
@@ -175,7 +178,7 @@ export default function Home() {
             width={150}
           ></Image>
           <h1
-            className={`text-center  text-5xl text-black opacity-90 pl-2 ${robotao.className}`}
+            className={` text-center  text-5xl text-black opacity-90 pl-2 ${robotao.className}`}
           >
             uSize
           </h1>
