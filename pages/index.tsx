@@ -21,6 +21,7 @@ export const images = [
   "/integra/wp.png",
   "/integra/nuvemshop.png",
   "/integra/woocomerce_trans.png",
+  "/integra/Shopify-Logo.png",
   // "/integra/wix.png",
 ];
 
@@ -273,7 +274,7 @@ export default function Home() {
           onClick={() => handleModal()}
         >
           <Image
-            className="relative top-2 right-1"
+            className="relative right-1"
             src={"/uSizeSymbol.png"}
             width={25}
             height={40}
