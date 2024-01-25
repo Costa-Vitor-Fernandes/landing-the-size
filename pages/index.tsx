@@ -1,3 +1,4 @@
+import React from 'react'
 import Image from "next/image";
 import { Overpass, Inter, Roboto } from "next/font/google";
 import AnimatedText from "../components/AnimatedText";
@@ -10,6 +11,7 @@ import ColorTest from "../components/ColorTest";
 import { FlippingButton } from "@/components/FlippingButton";
 import Link from "next/link";
 import Head from "next/head";
+
 export const inter = Inter({ subsets: ["latin"] });
 export const roboto = Roboto({ weight: ["300"], subsets: ["latin"] });
 export const robotao = Roboto({ weight: "500", subsets: ["latin"] });
@@ -25,7 +27,19 @@ export const images = [
   // "/integra/wix.png",
 ];
 
-const cardInfoSilver = {
+
+interface CardInfo {
+  h1: string;
+  p: React.ReactElement;
+  span: string;
+  button: string;
+  link: string;
+  smallText: string;
+  h1Color: string;
+  buttonColor: string;
+}
+
+const cardInfoSilver:CardInfo = {
   h1: "Prata",
   p: (
     <div>
@@ -136,6 +150,8 @@ const cardInfoDiamond = {
   link: '#contato',
   buttonColor: "-green-400",
 };
+
+
 
 export default function Home() {
   const [modal, setModal] = useState<boolean>(false);
@@ -276,8 +292,8 @@ export default function Home() {
           <Image
             className="relative right-1"
             src={"/uSizeSymbol.png"}
-            width={25}
-            height={40}
+            width={42}
+            height={42}
             alt="uSize hanger icon"
           />
           Provador Virtual
@@ -308,6 +324,6 @@ export default function Home() {
   );
 }
 
-export async function getServerSideProps() {
-  return { props: { data: "data" } };
-}
+// export async function getServerSideProps() {
+//   return { props: { data: "data" } };
+// }
