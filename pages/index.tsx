@@ -319,6 +319,14 @@ export default function Home() {
       </div>
 
       <ContactForm />
+
+      <footer className="flex flex-col items-center py-6 text-sm text-gray-500">
+        <p>&copy; {new Date().getFullYear()} uSize. Todos os direitos reservados.</p>
+        <Link href="/politica-de-privacidade" className="underline mt-1">
+          Política de Privacidade
+        </Link>
+      </footer>
+
     <ColorTest></ColorTest>
     </main>
   );

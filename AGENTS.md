@@ -1,49 +1,50 @@
 # uSize — Landing Page
 
 Landing page institucional do uSize, provador virtual para e-commerces.
-Next.js (Pages Router), Tailwind CSS, GSAP, SendGrid.
+Next.js (Pages Router), Tailwind CSS, GSAP, Resend.
 
 ## Stack
-- Next.js 13.4.9 (Pages Router)
+- Next.js 13.5.11 (Pages Router)
 - Tailwind CSS 3.3.2
 - GSAP 3.12 (animações)
-- SendGrid (envio de e-mails do formulário de contato)
+- Resend (envio de e-mails)
 - Deploy: Vercel
 
 ## Estrutura
 ```
 pages/
-  _app.tsx          — App wrapper
-  _document.tsx     — HTML document, meta tags, viewport
-  index.tsx         — Landing page principal
+  _app.tsx               — App wrapper
+  _document.tsx          — HTML document, meta tags, SEO
+  index.tsx              — Landing page principal
+  politica-de-privacidade.tsx — LGPD / Política de Privacidade
   api/
-    hello.ts        — Health check
-    sendEmail.tsx   — POST /api/sendEmail (SendGrid)
+    hello.ts             — Health check
+    sendEmail.tsx        — POST /api/sendEmail (Resend)
 components/
-  AnimatedText.tsx   — Animação GSAP do headline
-  Card.tsx           — Card de planos (Prata/Ouro/Diamante)
-  ColorTest.jsx      — Utilitário de teste de cor (legado)
-  ContactForm.tsx    — Formulário de contato
-  FlippingButton.tsx — Botão "Agende uma demonstração" com flip
-  InfiniteLooper.tsx — Carrossel infinito de logos
+  AnimatedText.tsx       — Animação GSAP do headline
+  Card.tsx               — Card de planos (Prata/Ouro/Diamante)
+  ColorTest.jsx          — Utilitário de teste de cor (legado)
+  ContactForm.tsx        — Formulário de contato com LGPD
+  FlippingButton.tsx     — Botão "Agende uma demonstração" com flip
+  InfiniteLooper.tsx     — Carrossel infinito de logos
 public/
-  integra/           — Logos de e-commerces parceiros
+  integra/               — Logos de e-commerces parceiros
 styles/
-  globals.css        — Tailwind + animações custom
+  globals.css            — Tailwind + animações custom
 ```
 
 ## Regras
 - Não misturar Pages Router com App Router
-- Manter formulário de contato funcional (SendGrid)
+- Manter formulário de contato funcional (Resend)
 - GSAP só pra animações existentes; evitar adicionar novas libs JS pesadas
 - SEO: manter Open Graph, Twitter Cards, canonical
 - LGPD: sempre incluir checkbox de consentimento em formulários
+- Viewport responsivo (width=device-width), sem hacks JS
 
 ## Variáveis de ambiente
 ```
-SENDGRID_API_KEY=
+RESEND_API_KEY=
 CONTACT_EMAIL=
-NEXT_PUBLIC_URL=
 ```
 
 ## Scripts
@@ -53,6 +54,9 @@ NEXT_PUBLIC_URL=
 - `npm run lint` — ESLint
 
 ## Observações
-- Viewport é gerenciado via JS em `_document.tsx` — abordagem legada, precisa de refactor
-- Phone input usa `type="number"` — trocar pra `type="tel"`
-- Sem política de privacidade / aviso LGPD atualmente
+- Viewport corrigido para responsivo padrão (removido hack width=380/580)
+- SendGrid substituído por Resend (mais simples, seguro, Vercel-native)
+- Input phone corrigido para `type="tel"`
+- Política de privacidade criada em `/politica-de-privacidade`
+- Formulário de contato com consentimento LGPD obrigatório
+- Feedback visual de sucesso/erro nos formulários
